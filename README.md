@@ -109,21 +109,32 @@
       ```
 
 ## Commands to Run the Services
-  ```bash
-  Start the services:
-    - docker-compose up
+  - Start the services:
+    ```bash
+    docker-compose up
+    ```
+    
+  - Run the containers in the background:
+    ```bash
+    docker-compose up -d
+    ```
+    
+  - Stop the running containers:
+    ```bash
+    docker-compose down
+    ```
 
-    - Run the containers in the background:
-      - docker-compose up -d
+  - Rebuild and run your Docker containers:
+    ```bash
+    docker-compose up --build -d
+    ```
 
-    - Stop the running containers:
-      - docker-compose down
+  - Check container status:
+    ```bash
+    docker-compose ps
+    ```
 
-    - Rebuild and run your Docker containers:
-      - docker-compose up --build -d
-
-    - Check container status:
-      - docker-compose ps
-
-    - View logs:
-      - docker-compose logs app
+  - View logs:
+    ```bash
+    docker-compose logs app
+    ```
