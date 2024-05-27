@@ -1,6 +1,6 @@
-#Docker Setup
+# Docker Setup
 
-##Install Docker
+## Install Docker
   - Ensure Docker is installed on your system. You can download it from the Docker website.
   - Docker Commands
     - Check Docker version:
@@ -23,7 +23,7 @@
       ```bash
       docker load -i docker-practice.tar
       ```
-##Create Dockerfile in the Project
+## Create Dockerfile in the Project
   - Here is an example Dockerfile for your project:
     ```bash
     FROM node:20-alpine
@@ -41,7 +41,7 @@
     CMD ["npm", "start"]
     ```
 
-##How to Share the Docker Image with Anyone
+## How to Share the Docker Image with Anyone
   - Create an account on Docker Hub:
     ```bash
     Go to Docker Hub and create an account.
@@ -71,12 +71,12 @@
       - docker run -d -p 3000:3000 your-dockerhub-username/testing:latest
     ```
     
-##Why Use docker-compose up
+## Why Use docker-compose up
   ```bash
   The docker-compose up command is used to start and run multi-container Docker applications defined in a docker-compose.yml file. Docker Compose simplifies managing and running           multiple Docker containers as a single service, making it easier to define, configure, and orchestrate complex applications.
   ```
 
-##Example docker-compose.yml File
+## Example docker-compose.yml File
   - Here is an example of a docker-compose.yml file for an Express.js application with a MongoDB database:
       ```bash
       yaml
@@ -108,22 +108,22 @@
           driver: local
       ```
 
-##Commands to Run the Services
-```bash
-Start the services:
-  - docker-compose up
+## Commands to Run the Services
+  ```bash
+  Start the services:
+    - docker-compose up
 
-  - Run the containers in the background:
-    - docker-compose up -d
+    - Run the containers in the background:
+      - docker-compose up -d
 
-  - Stop the running containers:
-    - docker-compose down
+    - Stop the running containers:
+      - docker-compose down
 
-  - Rebuild and run your Docker containers:
-    - docker-compose up --build -d
+    - Rebuild and run your Docker containers:
+      - docker-compose up --build -d
 
-  - Check container status:
-    - docker-compose ps
+    - Check container status:
+      - docker-compose ps
 
-  - View logs:
-    - docker-compose logs app
+    - View logs:
+      - docker-compose logs app
