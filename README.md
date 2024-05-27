@@ -1,7 +1,7 @@
 Docker Setup
 
-Install Docker
-Ensure Docker is installed on your system. You can download it from the Docker website.
+  - Install Docker
+    - Ensure Docker is installed on your system. You can download it from the Docker website.
 
 Docker Commands
 
