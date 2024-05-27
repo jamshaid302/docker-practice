@@ -7,22 +7,27 @@
       ```bash
       docker --version
       ```
+      
     - Build Docker image:
       ```bash
       docker build -t docker-practice .
       ```
+      
     - Run Docker image in a container:
       ```bash
       docker run -d -p 7000:7000 docker-practice
       ```
+      
     - Save Docker image as a .tar file:
       ```bash
       docker save -o docker-practice.tar docker-practice
       ```
+      
     - Load Docker image from a .tar file:
       ```bash
       docker load -i docker-practice.tar
       ```
+      
 ## Create Dockerfile in the Project
   - Here is an example Dockerfile for your project:
     ```bash
