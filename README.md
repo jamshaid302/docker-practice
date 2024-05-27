@@ -48,33 +48,41 @@
 
 ## How to Share the Docker Image with Anyone
   - Create an account on Docker Hub:
-    ```bash
-    Go to Docker Hub and create an account.
+    - Go to Docker Hub and create an account.
     
-    Create a repository on Docker Hub:
-      - Create a new repository on your Docker Hub account.
+  - Create a repository on Docker Hub:
+    - Create a new repository on your Docker Hub account.
 
-    Push the image to the repository:
-      - Tag the image:
-        - docker tag docker-practice your-dockerhub-username/testing:latest
+  - Push the image to the repository:
+    - Tag the image:
+      ```bash
+      docker tag docker-practice your-dockerhub-username/testing:latest
+      ```
 
-      - Push the image:
-        - docker push your-dockerhub-username/testing:latest
+    - Push the image:
+      ```bash
+      docker push your-dockerhub-username/testing:latest
+      ```
 
-    Share the repository link:
+    - Share the repository link:
       - Share the Docker Hub repository link with others.
 
-    Pull the image:
+    - Pull the image:
       - Pull the image using the repository link:
-        - docker pull your-dockerhub-username/testing:latest
+        ```bash
+        docker pull your-dockerhub-username/testing:latest
+        ```
 
-    Run the Docker image:
+    - Run the Docker image:
       - Run the pulled image in a container:
-        - docker run -d -p <host-port>:<container-port> your-dockerhub-username/testing:latest
+        ```bash
+        docker run -d -p <host-port>:<container-port> your-dockerhub-username/testing:latest
+        ```
 
-    For example, if your Express app runs on port 3000:
-      - docker run -d -p 3000:3000 your-dockerhub-username/testing:latest
-    ```
+    - For example, if your Express app runs on port 3000:
+      ```bash
+      docker run -d -p 3000:3000 your-dockerhub-username/testing:latest
+      ```
     
 ## Why Use docker-compose up
   ```bash
