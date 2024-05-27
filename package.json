@@ -1,0 +1,24 @@
+{
+  "name": "docker-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "docker:build": "docker build -t docker-practice .",
+    "docker:run": "docker run -d -p 7000:7000 docker-practice",
+    "docker:save": "docker save -o docker-practice.tar docker-practice",
+    "docker:load": "docker load -i docker-practice.tar",
+    "docker-compose": "docker-compose up -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "nodemon": "^3.1.0"
+  }
+}

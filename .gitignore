@@ -1,0 +1,19 @@
+# Data folder
+data/
+
+# Others
+dist/
+coverage/
+
+node_modules/
+
+# Log files
+logs
+*.log
+npm-debug.log*
+
+# Docker
+docker-compose.override.yml
+
+# Environment variables
+.env
