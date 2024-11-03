@@ -1,0 +1,26 @@
+version: "3.8" # docker-compose version
+
+services: # services which our app going to use. (list of containers we want to create)
+  app:
+    # image: jamshaidkhan/testing:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      MONGO_URI: mongodb://db:27017/docker-practice
+    depends_on:
+      - db
+
+  db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+
+volumes: # enable persistence of database data across container restart
+  data:
+    driver: local
