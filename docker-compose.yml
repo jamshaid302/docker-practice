@@ -28,7 +28,8 @@ services: # services which our app going to use. (list of containers we want to 
     restart: unless-stopped
 
   app:
-    # image: jamshaidkhan/testing:latest
+    # If you want to automate tagging and pushing in docker-compose.yml, you can specify the image key under the app service:
+    image: jamshaidkhan000/docker-practice:latest
     build:
       context: .
       dockerfile: Dockerfile

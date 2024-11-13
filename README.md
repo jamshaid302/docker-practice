@@ -4,6 +4,7 @@
 
 - Ensure Docker is installed on your system. You can download it from the Docker website.
 - Docker Commands
+
   - Check Docker version:
     ```bash
     docker --version
@@ -12,6 +13,15 @@
     ```bash
     docker build -t docker-practice .
     ```
+  - Build Docker image using docker-compose directly:
+    ```bash
+    docker-compose up --build
+    ```
+  - In Short running docker
+    ```bash
+    build -t docker-practice .
+    ```
+    is not necessary when you have the build context in docker-compose.yml and use docker-compose up --build. This keeps the workflow streamlined since Docker Compose takes care of both building and running the containers in one command.
   - Run Docker image in a container:
     ```bash
     docker run -d -p 8080:8080 docker-practice
